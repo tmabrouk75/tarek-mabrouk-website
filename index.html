@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarek Mabrouk | The Retention Revenue Architect</title>
+<meta name="description" content="Tarek Mabrouk is The Retention Revenue Architect - designing revenue systems for B2B SaaS companies in MENA. Author of Retention Schematics. 20+ years. 40M+ subscribers. STC. Mobily.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tarekmabrouk.com/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Tarek Mabrouk | The Retention Revenue Architect">
+<meta property="og:description" content="Designing retention systems that compound revenue - not just reduce churn. Author of Retention Schematics: The Revenue Compounding Playbook. Built for MENA SaaS.">
+<meta property="og:url" content="https://tarekmabrouk.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tarekmabrouk.com/images/og-image.jpg">
+<meta property="og:site_name" content="Tarek Mabrouk | The Retention Revenue Architect">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tarek Mabrouk | The Retention Revenue Architect">
+<meta name="twitter:description" content="Design the System. Expand the Customer. Compound the Revenue.">
+<meta name="twitter:image" content="https://tarekmabrouk.com/images/og-image.jpg">
+
+<!-- Schema: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tarek Mabrouk",
+  "jobTitle": "The Retention Revenue Architect",
+  "description": "Revenue systems architect specializing in B2B SaaS retention for MENA markets. 20+ years managing 40M+ subscribers at STC and Mobily. Author of Retention Schematics: The Revenue Compounding Playbook.",
+  "url": "https://tarekmabrouk.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/tarek-mabrouk-theretentionrevenuearchitect/",
+    "https://tarekmabrouk.substack.com"
+  ],
+  "knowsAbout": ["Retention Architecture", "NRR Compounding", "Customer Success", "B2B SaaS", "MENA", "Revenue Systems", "CLM"],
+  "alumniOf": ["STC", "Mobily"]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ── CSS VARIABLES ─────────────────────────────────────────────── */
+  :root {
+    --navy:        #0D1B2A;
+    --navy-2:      #0F2233;
+    --navy-3:      #1A3149;
+    --blue:        #1565C0;
+    --blue-l:      #1E7DD4;
+    --teal:        #00897B;
+    --amber:       #F57F17;
+    --amber-l:     #FFB300;
+    --red:         #B71C1C;
+    --white:       #FFFFFF;
+    --off-white:   #F0F4F8;
+    --muted:       #7A9BBF;
+    --border:      #1E3A5F;
+    --text:        #C8D8E8;
+    --mono:        'DM Mono', monospace;
+    --serif:       'DM Serif Display', Georgia, serif;
+    --sans:        'Inter', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NOISE TEXTURE ──────────────────────────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+
+  /* ── GRID LINES ─────────────────────────────────────────────────── */
+  .grid-bg {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(21,101,192,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(21,101,192,0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  section, header, footer, nav { position: relative; z-index: 1; }
+
+  /* ── NAV ────────────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px;
+    height: 64px;
+    background: rgba(13,27,42,0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    line-height: 1.1;
+  }
+  .nav-logo-sub {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber-l);
+  }
+
+  .nav-links {
+    display: flex; gap: 32px; list-style: none; align-items: center;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--amber) !important;
+    color: var(--navy) !important;
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-weight: 700 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--amber-l) !important; }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--muted);
+    transition: all 0.3s;
+    border-radius: 2px;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile menu */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: rgba(13,27,42,0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 20px;
+    z-index: 99;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--white); background: rgba(21,101,192,0.1); }
+  .mobile-menu .m-cta {
+    background: var(--amber);
+    color: var(--navy) !important;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* ── BUTTONS ────────────────────────────────────────────────────── */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--amber);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 14px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: all 0.2s;
+    border: none; cursor: pointer;
+    min-height: 48px;
+  }
+  .btn-primary:hover {
+    background: var(--amber-l);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(245,127,23,0.3);
+  }
+
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.2s;
+    min-height: 48px;
+  }
+  .btn-ghost:hover { color: var(--white); border-color: var(--muted); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--amber-l);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 13px 27px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 1px solid var(--amber);
+    letter-spacing: 0.3px;
+    transition: all 0.2s;
+    min-height: 48px;
+  }
+  .btn-outline:hover {
+    background: rgba(245,127,23,0.1);
+    border-color: var(--amber-l);
+  }
+
+  .btn-teal {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 13px 27px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 1px solid var(--teal);
+    letter-spacing: 0.3px;
+    transition: all 0.2s;
+    min-height: 48px;
+  }
+  .btn-teal:hover {
+    background: rgba(0,137,123,0.1);
+  }
+
+  /* ── HERO ───────────────────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 100px 40px 80px;
+    overflow: hidden;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 80px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber-l);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--amber-l);
+  }
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.0;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -2px;
+  }
+  .hero-title-line {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 28px;
+  }
+  .hero-sub {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--muted);
+    margin-bottom: 16px;
+    max-width: 520px;
+  }
+  .hero-tagline {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 36px;
+    opacity: 0.8;
+  }
+  .hero-actions {
+    display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+  }
+
+  /* Hero credential card */
+  .hero-card {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--amber), var(--teal), var(--blue));
+  }
+  .card-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .cred-row {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cred-row:last-child { border: none; padding-bottom: 0; }
+  .cred-icon-sm {
+    width: 36px; height: 36px; flex-shrink: 0;
+    background: rgba(21,101,192,0.1);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+  }
+  .cred-row-title {
+    font-size: 13px; font-weight: 600;
+    color: var(--white); margin-bottom: 2px;
+  }
+  .cred-row-sub { font-size: 12px; color: var(--muted); line-height: 1.4; }
+
+  /* ── MARQUEE ────────────────────────────────────────────────────── */
+  .marquee-section {
+    padding: 16px 0;
+    background: var(--navy-3);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .marquee-track {
+    display: flex; gap: 60px;
+    animation: marquee 36s linear infinite;
+    white-space: nowrap;
+  }
+  .marquee-item {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .marquee-item::before {
+    content: '◆';
+    color: var(--amber);
+    font-size: 8px;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── SHARED SECTION ─────────────────────────────────────────────── */
+  .section {
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(30px, 4vw, 44px);
+    color: var(--white);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+  .section-sub {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.75;
+    max-width: 600px;
+  }
+
+  /* ── WHAT I DO - 3 PILLARS ──────────────────────────────────────── */
+  .pillars-section {
+    padding: 100px 40px;
+    background: linear-gradient(180deg, transparent 0%, rgba(21,101,192,0.04) 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .pillars-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+  .pillar-card {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  .pillar-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+  }
+  .pillar-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  }
+  .pillar-card.write::before { background: var(--amber); }
+  .pillar-card.build::before { background: var(--teal); }
+  .pillar-card.advise::before { background: var(--blue-l); }
+
+  .pillar-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .pillar-heading {
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+  }
+  .pillar-card.write .pillar-heading { color: var(--amber-l); }
+  .pillar-card.build .pillar-heading { color: var(--teal); }
+  .pillar-card.advise .pillar-heading em { color: var(--blue-l); font-style: normal; }
+  .pillar-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+
+  /* ── BOOK SECTION ───────────────────────────────────────────────── */
+  .book-section {
+    padding: 100px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .book-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .book-cover {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .book-cover::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--amber), var(--teal));
+  }
+  .book-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber-l);
+    background: rgba(245,127,23,0.1);
+    border: 1px solid rgba(245,127,23,0.2);
+    border-radius: 2px;
+    padding: 4px 10px;
+    margin-bottom: 24px;
+  }
+  .book-title-display {
+    font-family: var(--serif);
+    font-size: 28px;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .book-sub-display {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .book-tagline {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--teal);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .book-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 32px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .book-stat { text-align: center; }
+  .book-stat-num {
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--amber-l);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .book-stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .book-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(30,58,95,0.6);
+  }
+  .book-feature:last-of-type { border: none; }
+  .book-feature-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--amber-l);
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+  .book-feature-text { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .book-feature-text strong { color: var(--white); }
+
+  /* ── FREE TOOLS SECTION ─────────────────────────────────────────── */
+  .tools-section {
+    padding: 100px 40px;
+    background: rgba(0,137,123,0.03);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .tools-inner { max-width: 1100px; margin: 0 auto; }
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 56px;
+  }
+  .tool-card {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 28px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .tool-card:hover {
+    border-color: var(--blue-l);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(21,101,192,0.12);
+  }
+  .tool-card.featured {
+    border-color: rgba(245,127,23,0.3);
+    background: rgba(245,127,23,0.04);
+  }
+  .tool-card.featured::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--amber);
+  }
+  .tool-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .tool-name {
+    font-size: 15px; font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px; line-height: 1.3;
+  }
+  .tool-desc {
+    font-size: 13px; color: var(--muted);
+    line-height: 1.6; margin-bottom: 16px;
+  }
+  .tool-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+  .badge-free    { background: rgba(0,137,123,0.15); color: var(--teal); border: 1px solid rgba(0,137,123,0.2); }
+  .badge-major   { background: rgba(21,101,192,0.12); color: #64B5F6; border: 1px solid rgba(21,101,192,0.2); }
+  .badge-coming  { background: rgba(122,155,191,0.08); color: var(--muted); border: 1px solid var(--border); }
+
+  /* Featured free tool spotlight */
+  .free-spotlight {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .free-spotlight::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--blue));
+  }
+  .what-inside { display: flex; flex-direction: column; gap: 10px; margin: 20px 0 28px; }
+  .what-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 14px; color: var(--text); line-height: 1.5;
+  }
+  .what-item::before {
+    content: '✓';
+    color: var(--teal);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .price-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-top: 12px;
+  }
+
+  /* ── NEWSLETTER SECTION ─────────────────────────────────────────── */
+  .newsletter-section {
+    padding: 100px 40px;
+    background: rgba(21,101,192,0.03);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .newsletter-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .newsletter-card {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .newsletter-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--teal));
+  }
+  .newsletter-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(30,58,95,0.6);
+  }
+  .newsletter-item:last-child { border: none; }
+  .nl-icon {
+    width: 36px; height: 36px;
+    background: rgba(21,101,192,0.1);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .nl-item-title { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+  .nl-item-desc  { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* ── CONSULTING SECTION ─────────────────────────────────────────── */
+  .consult-section {
+    padding: 100px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .consult-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .consult-card {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .consult-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--amber), var(--blue));
+  }
+  .consult-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(30,58,95,0.6);
+  }
+  .consult-item:last-child { border: none; }
+  .consult-icon {
+    width: 36px; height: 36px;
+    background: rgba(245,127,23,0.08);
+    border: 1px solid rgba(245,127,23,0.15);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+  }
+  .consult-title { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+  .consult-desc  { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .qualify-list {
+    display: flex; flex-direction: column; gap: 10px; margin: 20px 0 28px;
+  }
+  .qualify-item {
+    display: flex; gap: 10px;
+    font-size: 14px; color: var(--text); line-height: 1.5;
+    align-items: flex-start;
+  }
+  .qualify-item::before {
+    content: '→';
+    color: var(--amber-l);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* ── ABOUT SECTION ──────────────────────────────────────────────── */
+  .about-section { padding: 100px 40px; }
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-card {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 36px;
+    position: sticky;
+    top: 88px;
+  }
+  .about-name {
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .about-title-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--amber-l);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .about-bio {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+  .about-links { display: flex; flex-direction: column; gap: 10px; }
+  .about-link {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 10px 14px;
+    background: rgba(21,101,192,0.08);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    transition: all 0.2s;
+    min-height: 44px;
+  }
+  .about-link:hover { color: var(--white); border-color: var(--blue); background: rgba(21,101,192,0.15); }
+  .about-link-icon { font-size: 15px; }
+
+  .about-content { padding-top: 8px; }
+  .credential {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .credential:first-child { padding-top: 0; }
+  .credential:last-child { border: none; }
+  .cred-icon {
+    width: 40px; height: 40px;
+    background: rgba(21,101,192,0.1);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .cred-text { flex: 1; }
+  .cred-title { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+  .cred-sub { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* ── LAUNCH TEASER ──────────────────────────────────────────────── */
+  .launch-section {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, rgba(21,101,192,0.08) 0%, rgba(0,137,123,0.05) 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .launch-inner {
+    max-width: 800px; margin: 0 auto; text-align: center;
+  }
+  .launch-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber-l);
+    background: rgba(245,127,23,0.08);
+    border: 1px solid rgba(245,127,23,0.2);
+    border-radius: 20px;
+    padding: 6px 16px;
+    margin-bottom: 28px;
+  }
+  .launch-badge::before { content: '◆'; font-size: 7px; }
+  .launch-title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 40px);
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .launch-title em { color: var(--amber-l); font-style: italic; }
+  .launch-sub {
+    font-size: 16px; color: var(--muted); line-height: 1.75;
+    margin-bottom: 36px;
+    max-width: 560px; margin-left: auto; margin-right: auto;
+  }
+  .launch-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── FOOTER ─────────────────────────────────────────────────────── */
+  footer {
+    background: var(--navy-3);
+    border-top: 1px solid var(--border);
+    padding: 56px 40px 40px;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .footer-tagline {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .footer-cols { display: flex; gap: 60px; flex-wrap: wrap; }
+  .footer-col-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .footer-col-links { display: flex; flex-direction: column; gap: 10px; }
+  .footer-col-links a {
+    font-size: 13px; color: var(--muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-col-links a:hover { color: var(--white); }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
+  .footer-social { display: flex; gap: 16px; }
+  .footer-social a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .footer-social a:hover { color: var(--amber-l); }
+
+  /* ── DIVIDER ────────────────────────────────────────────────────── */
+  .divider {
+    width: 100%; max-width: 1100px; margin: 0 auto;
+    height: 1px; background: var(--border);
+  }
+
+  /* ── SCROLL ANIMATIONS ──────────────────────────────────────────── */
+  .fade-up {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ─────────────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .book-inner,
+    .newsletter-inner,
+    .consult-inner { grid-template-columns: 1fr; }
+    .free-spotlight { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; }
+    .about-card { position: static; }
+    .tools-grid { grid-template-columns: 1fr 1fr; }
+    .section,
+    .pillars-section,
+    .book-section,
+    .tools-section,
+    .newsletter-section,
+    .consult-section,
+    .about-section { padding: 64px 20px; }
+    .launch-section { padding: 60px 20px; }
+    .footer-top { flex-direction: column; }
+  }
+
+  @media (max-width: 600px) {
+    .tools-grid { grid-template-columns: 1fr; }
+    .hero { padding: 100px 20px 60px; }
+    .book-stats { gap: 20px; }
+    .launch-actions { flex-direction: column; align-items: center; }
+    .footer-cols { gap: 32px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────────────────── -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">
+    Tarek Mabrouk
+    <span class="nav-logo-sub">The Retention Revenue Architect</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#book">Book</a></li>
+    <li><a href="#tools">Free Tools</a></li>
+    <li><a href="#newsletter">Newsletter</a></li>
+    <li><a href="#work-with-me">Work With Me</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="https://retentionarchitect.gumroad.com/l/Toolkist-CAC_Calculator" target="_blank" rel="noopener" class="nav-cta">Free Tool ↓</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#book">Book</a>
+  <a href="#tools">Free Tools</a>
+  <a href="#newsletter">Newsletter</a>
+  <a href="#work-with-me">Work With Me</a>
+  <a href="#about">About</a>
+  <a href="https://retentionarchitect.gumroad.com/l/Toolkist-CAC_Calculator" target="_blank" rel="noopener" class="m-cta">↓ Get Free Tool</a>
+</div>
+
+<!-- ── HERO ────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="grid-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">The Retention Revenue Architect</p>
+      <h1 class="hero-name">Tarek<br>Mabrouk</h1>
+      <p class="hero-title-line">Designing Revenue Systems · MENA B2B SaaS</p>
+      <p class="hero-sub">
+        I help B2B SaaS companies in MENA design retention systems that compound
+        revenue - not just reduce churn. 20+ years. 40M+ subscribers. Operator scale.
+        Now translated into a book, a toolkit, and a framework built for this market.
+      </p>
+      <p class="hero-tagline">Design the System · Expand the Customer · Compound the Revenue</p>
+      <div class="hero-actions">
+        <a href="https://retentionarchitect.gumroad.com/l/qrhzi"
+           target="_blank" rel="noopener" class="btn-primary">
+          Pre-Order the Book →
+        </a>
+        <a href="#tools" class="btn-ghost">Get Free Tools ↓</a>
+      </div>
+    </div>
+
+    <div class="hero-card fade-up">
+      <p class="card-label">// architect.credentials</p>
+      <div class="cred-row">
+        <div class="cred-icon-sm">🏢</div>
+        <div>
+          <div class="cred-row-title">STC: GM-Level Retention Advisor</div>
+          <div class="cred-row-sub">Saudi Telecom Company · P&amp;L responsibility</div>
+        </div>
+      </div>
+      <div class="cred-row">
+        <div class="cred-icon-sm">📡</div>
+        <div>
+          <div class="cred-row-title">Mobily: Exec. Manager, CLM Ops</div>
+          <div class="cred-row-sub">40M+ subscribers · Full base management</div>
+        </div>
+      </div>
+      <div class="cred-row">
+        <div class="cred-icon-sm">📘</div>
+        <div>
+          <div class="cred-row-title">Author: Retention Schematics</div>
+          <div class="cred-row-sub">33 chapters · Pre-order now open</div>
+        </div>
+      </div>
+      <div class="cred-row">
+        <div class="cred-icon-sm">🛠️</div>
+        <div>
+          <div class="cred-row-title">Retention Schematics OS</div>
+          <div class="cred-row-sub">30+ tools · Building now · Free tools available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── MARQUEE ──────────────────────────────────────────────────────── -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">Retention Architecture</span>
+    <span class="marquee-item">NRR Compounding</span>
+    <span class="marquee-item">B2B SaaS · MENA</span>
+    <span class="marquee-item">The RARE Framework</span>
+    <span class="marquee-item">Revenue Systems Design</span>
+    <span class="marquee-item">Customer Lifetime Value</span>
+    <span class="marquee-item">Operator Scale · 40M+ Subscribers</span>
+    <span class="marquee-item">Expansion Revenue</span>
+    <span class="marquee-item">CS Strategy · GCC &amp; Egypt</span>
+    <span class="marquee-item">Retention Architecture</span>
+    <span class="marquee-item">NRR Compounding</span>
+    <span class="marquee-item">B2B SaaS · MENA</span>
+    <span class="marquee-item">The RARE Framework</span>
+    <span class="marquee-item">Revenue Systems Design</span>
+    <span class="marquee-item">Customer Lifetime Value</span>
+    <span class="marquee-item">Operator Scale · 40M+ Subscribers</span>
+    <span class="marquee-item">Expansion Revenue</span>
+    <span class="marquee-item">CS Strategy · GCC &amp; Egypt</span>
+  </div>
+</div>
+
+<!-- ── WHAT I DO - 3 PILLARS ───────────────────────────────────────── -->
+<div class="pillars-section">
+  <div class="pillars-inner">
+    <div class="fade-up">
+      <p class="section-eyebrow">// what I do</p>
+      <h2 class="section-title">Three things. One system.</h2>
+      <p class="section-sub" style="margin-top:16px">
+        Everything I build points in the same direction: a retention discipline that treats
+        every retained customer as a compounding revenue asset - not a renewal checkbox.
+      </p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card write fade-up">
+        <div class="pillar-num">01 · WRITE</div>
+        <div class="pillar-heading">The Book</div>
+        <div class="pillar-desc">
+          Retention Schematics: The Revenue Compounding Playbook - a 33-chapter operational
+          manual for MENA SaaS and fintech leaders who are building retention as a revenue
+          engine, not a support function.
+        </div>
+        <a href="#book" class="btn-outline" style="font-size:13px; padding:10px 20px; min-height:auto">
+          Read more about the book →
+        </a>
+      </div>
+      <div class="pillar-card build fade-up">
+        <div class="pillar-num">02 · BUILD</div>
+        <div class="pillar-heading">The OS &amp; Tools</div>
+        <div class="pillar-desc">
+          The Retention Schematics OS - 30+ operational tools built to run the book's
+          framework. CAC Calculator, NRR Tracker, Health Score, Churn Predictor, and more.
+          Start with the free tools. Expand from there.
+        </div>
+        <a href="#tools" class="btn-teal" style="font-size:13px; padding:10px 20px; min-height:auto">
+          Get free tools ↓
+        </a>
+      </div>
+      <div class="pillar-card advise fade-up">
+        <div class="pillar-num">03 · ADVISE</div>
+        <div class="pillar-heading">Work <em>With Me</em></div>
+        <div class="pillar-desc">
+          Free retention diagnostic for 2–3 MENA SaaS companies this quarter. Full churn
+          risk report, 12 pre-configured OS tools, 60-minute strategy session, and a 30-day
+          follow-up. No invoice - a case study in return.
+        </div>
+        <a href="#work-with-me" class="btn-ghost" style="font-size:13px; padding:10px 0; min-height:auto; border-bottom:1px solid var(--border)">
+          Apply for the diagnostic →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── BOOK SECTION ────────────────────────────────────────────────── -->
+<div class="book-section" id="book">
+  <div class="book-inner">
+    <div class="fade-up">
+      <p class="section-eyebrow">// the book</p>
+      <h2 class="section-title">Retention Schematics:<br>The Revenue Compounding<br>Playbook</h2>
+      <p class="section-sub" style="margin-top:16px; margin-bottom:24px">
+        Most retention books were written for US and European SaaS companies - built on
+        benchmarks, culture, and sales dynamics that don't hold in MENA. This one was built
+        here. It introduces Retention Architecture as a discipline: the practice of designing
+        systems that compound NRR, not just defend against churn.
+      </p>
+      <div class="book-feature">
+        <div class="book-feature-dot"></div>
+        <div class="book-feature-text"><strong>33 chapters</strong> - 29 structured for scaling companies, 4 purpose-built for early-stage startups</div>
+      </div>
+      <div class="book-feature">
+        <div class="book-feature-dot"></div>
+        <div class="book-feature-text"><strong>The RARE Framework</strong> - Revenue Architecture and Retention Excellence: the operating methodology for NRR compounding</div>
+      </div>
+      <div class="book-feature">
+        <div class="book-feature-dot"></div>
+        <div class="book-feature-text"><strong>MENA-calibrated</strong> - built on operator-scale experience at STC and Mobily across Saudi Arabia, UAE, and Egypt</div>
+      </div>
+      <div class="book-feature">
+        <div class="book-feature-dot"></div>
+        <div class="book-feature-text"><strong>Not tactics - systems</strong>: tactics tell you what to do once; systems tell you how to build something that works at any account, any team size</div>
+      </div>
+      <div class="book-feature">
+        <div class="book-feature-dot"></div>
+        <div class="book-feature-text"><strong>Companion toolkit included</strong> - the Retention Schematics OS is the operational layer that runs the book's framework</div>
+      </div>
+      <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap; align-items:center">
+        <a href="https://retentionarchitect.gumroad.com/l/qrhzi"
+           target="_blank" rel="noopener" class="btn-primary">
+          Pre-Order on Gumroad →
+        </a>
+        <a href="https://www.linkedin.com/in/tarek-mabrouk-theretentionrevenuearchitect/"
+           target="_blank" rel="noopener" class="btn-ghost">
+          Follow updates on LinkedIn →
+        </a>
+      </div>
+    </div>
+
+    <div class="book-cover fade-up">
+      <div class="book-badge">Pre-Order Now Open</div>
+      <div class="book-title-display">Retention Schematics</div>
+      <div class="book-sub-display">The Revenue Compounding Playbook</div>
+      <div class="book-tagline">Design · Expand · Compound</div>
+      <div class="book-stats">
+        <div class="book-stat">
+          <span class="book-stat-num">33</span>
+          <span class="book-stat-label">Chapters</span>
+        </div>
+        <div class="book-stat">
+          <span class="book-stat-num">20+</span>
+          <span class="book-stat-label">Yrs Experience</span>
+        </div>
+        <div class="book-stat">
+          <span class="book-stat-num">40M+</span>
+          <span class="book-stat-label">Subscribers</span>
+        </div>
+      </div>
+      <a href="https://retentionarchitect.gumroad.com/l/qrhzi"
+         target="_blank" rel="noopener"
+         class="btn-primary" style="width:100%; justify-content:center; margin-bottom:16px">
+        Pre-Order on Gumroad →
+      </a>
+      <div style="background:rgba(0,137,123,0.08); border:1px solid rgba(0,137,123,0.15); border-radius:4px; padding:16px; margin-top:4px">
+        <div style="font-family:var(--mono); font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:6px">The Tagline</div>
+        <div style="font-size:13px; color:var(--text); font-style:italic; line-height:1.6">
+          "Design the System. Expand the Customer. Compound the Revenue."
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FREE TOOLS SECTION ──────────────────────────────────────────── -->
+<div class="tools-section" id="tools">
+  <div class="tools-inner">
+    <div class="fade-up">
+      <p class="section-eyebrow">// free tools - Retention Schematics OS</p>
+      <h2 class="section-title">Start free. Expand<br>as your system grows.</h2>
+      <p class="section-sub" style="margin-top:16px">
+        Every tool in the OS came from a real problem encountered running retention at scale.
+        The free tools are fully unlocked - no email required, no stripped-down version.
+      </p>
+    </div>
+
+    <!-- Free Spotlight -->
+    <div class="free-spotlight fade-up" style="margin-top:56px">
+      <div>
+        <div style="font-family:var(--mono); font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--teal); margin-bottom:12px">// FEATURED FREE TOOL</div>
+        <h3 style="font-family:var(--serif); font-size:30px; color:var(--white); margin-bottom:12px; letter-spacing:-0.3px">CAC Reality<br>Calculator</h3>
+        <p style="font-size:15px; color:var(--muted); line-height:1.75; margin-bottom:28px">
+          Your CRM is reporting a CAC number missing 30–50% of the real cost.
+          This calculator finds the fully-loaded, board-ready number - with a dedicated
+          MENA section that accounts for what global models ignore.
+        </p>
+        <a href="https://retentionarchitect.gumroad.com/l/Toolkist-CAC_Calculator"
+           target="_blank" rel="noopener" class="btn-primary">
+          ↓ Download Free on Gumroad
+        </a>
+        <p class="price-note" style="margin-top:12px">Pay what you want · $0 minimum · No email required</p>
+      </div>
+      <div>
+        <div style="font-family:var(--mono); font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:12px">// what is inside</div>
+        <div style="font-size:13px; color:var(--muted); margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--border)">3-sheet Excel workbook - fully unlocked</div>
+        <div class="what-inside">
+          <div class="what-item">12 cost categories - Reported CAC vs Real CAC calculated automatically</div>
+          <div class="what-item">Segment-level: SMB, Mid-Market, and Enterprise broken out separately</div>
+          <div class="what-item">Payback period, LTV:CAC ratio, and CAC as % of 12-month revenue</div>
+          <div class="what-item">4 smart recommendations generated from your actual inputs</div>
+          <div class="what-item">MENA-specific section: relationship hosting and T&amp;E cost inputs</div>
+        </div>
+        <a href="https://retentionarchitect.gumroad.com/l/Toolkist-CAC_Calculator"
+           target="_blank" rel="noopener"
+           class="btn-teal" style="width:100%; justify-content:center">
+          Get it Free →
+        </a>
+      </div>
+    </div>
+
+    <!-- Tools Grid -->
+    <div class="tools-grid">
+      <div class="tool-card featured fade-up">
+        <div class="tool-num">TOOL #02 · FREE</div>
+        <div class="tool-name">CAC Reality Calculator</div>
+        <div class="tool-desc">True, fully-loaded CAC across 3 segments with MENA cost calibration and board-ready output. 30–50% more accurate than standard models.</div>
+        <span class="tool-badge badge-free">Free on Gumroad</span>
+      </div>
+      <div class="tool-card fade-up">
+        <div class="tool-num">TOOL #09</div>
+        <div class="tool-name">NRR Calculator &amp; Tracker</div>
+        <div class="tool-desc">Track Net Revenue Retention and GRR monthly. ARR waterfall chart, cohort breakdown, and board-ready NRR summary dashboard.</div>
+        <span class="tool-badge badge-major">Core OS</span>
+      </div>
+      <div class="tool-card fade-up">
+        <div class="tool-num">TOOL #20</div>
+        <div class="tool-name">Customer Health Score - 3D</div>
+        <div class="tool-desc">Score every account across Product Adoption, Relationship Health, and Commercial Health simultaneously. 30-account portfolio tracker.</div>
+        <span class="tool-badge badge-major">Core OS</span>
+      </div>
+      <div class="tool-card fade-up">
+        <div class="tool-num">TOOL #22</div>
+        <div class="tool-name">Churn Probability Predictor</div>
+        <div class="tool-desc">8 configurable churn signals with adjustable weights. Composite risk score, tier classification, and recommended intervention per account.</div>
+        <span class="tool-badge badge-major">Core OS</span>
+      </div>
+      <div class="tool-card fade-up">
+        <div class="tool-num">TOOL #82</div>
+        <div class="tool-name">Business Case for Retention</div>
+        <div class="tool-desc">CFO-ready 3-year ROI model. Conservative, base, and upside scenarios with payback period and board-presentation output.</div>
+        <span class="tool-badge badge-major">Core OS</span>
+      </div>
+      <div class="tool-card fade-up">
+        <div class="tool-num">TOOL #40</div>
+        <div class="tool-name">90-Day Onboarding Tracker</div>
+        <div class="tool-desc">Track 30 customers through 8 milestones. Automated health score, early-intervention flag, and onboarding portfolio dashboard.</div>
+        <span class="tool-badge badge-major">Core OS</span>
+      </div>
+      <div class="tool-card fade-up">
+        <div class="tool-num">TOOL #81</div>
+        <div class="tool-name">Retention Transformation Roadmap</div>
+        <div class="tool-desc">24-question maturity assessment across 5 dimensions. 90-day phased roadmap with 15 prioritised actions and a readiness score.</div>
+        <span class="tool-badge badge-major">Core OS</span>
+      </div>
+      <div class="tool-card fade-up">
+        <div class="tool-num">TOOL #36</div>
+        <div class="tool-name">Win-Back Campaign Planner</div>
+        <div class="tool-desc">Score churned customers on win-back probability. 4-touch outreach campaign with message angle calibrated to churn reason and account tier.</div>
+        <span class="tool-badge badge-major">Core OS</span>
+      </div>
+      <div class="tool-card fade-up" style="opacity:0.55; pointer-events:none">
+        <div class="tool-num">+ 22 MORE TOOLS</div>
+        <div class="tool-name">Expanding Every Month</div>
+        <div class="tool-desc">New tools releasing progressively. Follow on LinkedIn or Substack to be notified the moment a new tool drops.</div>
+        <span class="tool-badge badge-coming">Coming soon</span>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px">
+      <a href="https://retentionarchitect.gumroad.com"
+         target="_blank" rel="noopener" class="btn-outline">
+        Browse all tools on Gumroad →
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── NEWSLETTER SECTION ──────────────────────────────────────────── -->
+<div class="newsletter-section" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="fade-up">
+      <p class="section-eyebrow">// the newsletter</p>
+      <h2 class="section-title">Retention Architecture.<br>Published on Substack.</h2>
+      <p class="section-sub" style="margin-top:16px; margin-bottom:24px">
+        Each issue is one idea, one system, one tool - written for B2B SaaS leaders in MENA
+        who are building retention as a revenue function. No roundups. No tips. Real
+        frameworks from operator-scale retention practice.
+      </p>
+      <p class="section-sub" style="margin-bottom:36px">
+        Published in both English and Arabic. Free to read. Built to compound.
+      </p>
+      <a href="https://tarekmabrouk.substack.com"
+         target="_blank" rel="noopener" class="btn-primary">
+        Subscribe on Substack →
+      </a>
+      <br>
+      <a href="https://www.linkedin.com/in/tarek-mabrouk-theretentionrevenuearchitect/"
+         target="_blank" rel="noopener" class="btn-ghost" style="margin-top:16px">
+        Follow on LinkedIn →
+      </a>
+    </div>
+
+    <div class="newsletter-card fade-up">
+      <div style="font-family:var(--mono); font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); margin-bottom:20px">// what each issue covers</div>
+      <div class="newsletter-item">
+        <div class="nl-icon">🔧</div>
+        <div>
+          <div class="nl-item-title">One Framework, Built for MENA</div>
+          <div class="nl-item-desc">Retention systems designed for relationship-led sales, trust-first culture, and GCC enterprise dynamics - not Silicon Valley benchmarks.</div>
+        </div>
+      </div>
+      <div class="newsletter-item">
+        <div class="nl-icon">📊</div>
+        <div>
+          <div class="nl-item-title">Numbers That Hold Operators Accountable</div>
+          <div class="nl-item-desc">Real CAC math, NRR movement analysis, and CLV models that make the business case for retention in a language CFOs understand.</div>
+        </div>
+      </div>
+      <div class="newsletter-item">
+        <div class="nl-icon">🌍</div>
+        <div>
+          <div class="nl-item-title">Arabic + English - Every Issue</div>
+          <div class="nl-item-desc">Published bilingually in MENA Professional Arabic and English. Built for leaders across Saudi Arabia, UAE, Egypt, and the wider region.</div>
+        </div>
+      </div>
+      <div class="newsletter-item">
+        <div class="nl-icon">🛠️</div>
+        <div>
+          <div class="nl-item-title">Tool Drops &amp; Early Access</div>
+          <div class="nl-item-desc">Every new OS tool and book chapter update goes to Substack subscribers first - before LinkedIn and before Gumroad listing.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── INDIEGOGO LAUNCH TEASER ─────────────────────────────────────── -->
+<div class="launch-section">
+  <div class="launch-inner fade-up">
+    <div class="launch-badge">Launching June 2026</div>
+    <h2 class="launch-title">The complete OS is<br>coming to <em>Indiegogo.</em></h2>
+    <p class="launch-sub">
+      The full Retention Schematics OS - book + 30+ tools + diagnostic framework -
+      launching on Indiegogo in June 2026. Early backers get founder-tier access
+      at a price that will not be offered again.
+    </p>
+    <div class="launch-actions">
+      <a href="https://www.linkedin.com/in/tarek-mabrouk-theretentionrevenuearchitect/"
+         target="_blank" rel="noopener" class="btn-primary">
+        Follow on LinkedIn to be notified →
+      </a>
+      <a href="https://tarekmabrouk.substack.com"
+         target="_blank" rel="noopener" class="btn-outline">
+        Subscribe on Substack →
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ── CONSULTING / WORK WITH ME ───────────────────────────────────── -->
+<div class="consult-section" id="work-with-me">
+  <div class="consult-inner">
+    <div class="fade-up">
+      <p class="section-eyebrow">// work with me</p>
+      <h2 class="section-title">Free Retention<br>Diagnostic - 2 companies<br>this quarter.</h2>
+      <p class="section-sub" style="margin-top:16px; margin-bottom:20px">
+        I'm offering a complimentary, full-scope retention diagnostic to 2–3 MENA
+        SaaS or fintech companies this quarter. You get a custom churn risk report,
+        12 OS tools pre-configured for your business, and a 60-minute strategy walkthrough.
+        In return: a testimonial and permission to reference the case study.
+      </p>
+      <p class="section-eyebrow" style="margin-bottom:12px">// You qualify if:</p>
+      <div class="qualify-list">
+        <div class="qualify-item">B2B SaaS or fintech company operating in MENA</div>
+        <div class="qualify-item">50–500 employees and $3M–$30M ARR</div>
+        <div class="qualify-item">NRR below 110% or churn you can't fully explain</div>
+        <div class="qualify-item">Decision-maker ready to share anonymised retention data (NDA signed first)</div>
+      </div>
+      <a href="https://www.linkedin.com/in/tarek-mabrouk-theretentionrevenuearchitect/"
+         target="_blank" rel="noopener" class="btn-primary">
+        Apply via LinkedIn →
+      </a>
+    </div>
+
+    <div class="consult-card fade-up">
+      <div style="font-family:var(--mono); font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:20px">// what the diagnostic includes</div>
+      <div class="consult-item">
+        <div class="consult-icon">🔍</div>
+        <div>
+          <div class="consult-title">Custom Churn Risk Report</div>
+          <div class="consult-desc">Top 3 churn drivers diagnosed - mapped to your actual customer data and segment mix, not global averages.</div>
+        </div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-icon">🛠️</div>
+        <div>
+          <div class="consult-title">12 OS Tools - Pre-Configured</div>
+          <div class="consult-desc">12 tools from the Retention Schematics OS adapted to your business context and delivered ready to use.</div>
+        </div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-icon">📞</div>
+        <div>
+          <div class="consult-title">60-Min Strategy Walkthrough</div>
+          <div class="consult-desc">Live session to walk through findings, prioritise the top actions, and answer your team's questions.</div>
+        </div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-icon">📅</div>
+        <div>
+          <div class="consult-title">30-Day Follow-Up Check</div>
+          <div class="consult-desc">A follow-up session 30 days later to review implementation and define the next 90-day priorities.</div>
+        </div>
+      </div>
+      <div style="padding-top:20px; border-top:1px solid var(--border);">
+        <div style="display:flex; justify-content:space-between; align-items:center">
+          <div>
+            <div style="font-family:var(--mono); font-size:10px; letter-spacing:2px; color:var(--muted); margin-bottom:4px">ESTIMATED VALUE</div>
+            <div style="font-family:var(--serif); font-size:28px; color:var(--white)">$5,000</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-family:var(--mono); font-size:10px; letter-spacing:2px; color:var(--teal); margin-bottom:4px">YOUR INVESTMENT</div>
+            <div style="font-family:var(--serif); font-size:28px; color:var(--teal)">$0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ABOUT SECTION ───────────────────────────────────────────────── -->
+<div class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-card fade-up">
+      <div class="about-name">Tarek Mabrouk</div>
+      <div class="about-title-tag">The Retention Revenue Architect</div>
+      <div class="about-bio">
+        Revenue systems architect specializing in B2B SaaS retention for MENA markets.
+        20+ years managing retention at operator scale - STC and Mobily - across 40M+
+        subscribers with full P&amp;L responsibility. Author of Retention Schematics.
+        Based in Cairo.
+      </div>
+      <div class="about-links">
+        <a href="https://www.linkedin.com/in/tarek-mabrouk-theretentionrevenuearchitect/"
+           target="_blank" rel="noopener" class="about-link">
+          <span class="about-link-icon">💼</span> Follow on LinkedIn
+        </a>
+        <a href="https://tarekmabrouk.substack.com"
+           target="_blank" rel="noopener" class="about-link">
+          <span class="about-link-icon">📖</span> Subscribe on Substack
+        </a>
+        <a href="https://retentionarchitect.gumroad.com"
+           target="_blank" rel="noopener" class="about-link">
+          <span class="about-link-icon">🛒</span> Browse the Gumroad Store
+        </a>
+        <a href="https://retentionarchitect.gumroad.com/l/Toolkist-CAC_Calculator"
+           target="_blank" rel="noopener" class="about-link">
+          <span class="about-link-icon">📥</span> Get the Free CAC Calculator
+        </a>
+      </div>
+    </div>
+
+    <div class="about-content fade-up">
+      <p class="section-eyebrow">// about the architect</p>
+      <h2 class="section-title">Built from operator-scale retention - not consulting theory.</h2>
+      <p style="font-size:15px; color:var(--muted); line-height:1.8; margin-top:20px; margin-bottom:32px">
+        Every tool in the Retention Schematics OS and every chapter in the book came from
+        a real problem encountered running retention at scale - first in telecom, now in
+        SaaS and fintech consulting. The CAC Calculator exists because companies were
+        presenting a board number missing 40% of the real cost. The Onboarding Tracker
+        exists because enterprise accounts were going silent in Month 2 and nobody noticed
+        until the renewal conversation 10 months later. The RARE Framework exists because
+        "reducing churn" was never the right goal - expanding every customer's value over
+        time is the system. Retention Schematics is how you install it.
+      </p>
+      <div class="divider" style="margin-bottom:32px"></div>
+      <div class="credential">
+        <div class="cred-icon">🏢</div>
+        <div class="cred-text">
+          <div class="cred-title">STC: Marketing Retention Advisor (GM Level)</div>
+          <div class="cred-sub">Retention strategy advisory at GM level at Saudi Telecom Company, one of the largest telecom operators in MENA. P&amp;L management responsibility across tens of millions of subscribers.</div>
+        </div>
+      </div>
+      <div class="credential">
+        <div class="cred-icon">📡</div>
+        <div class="cred-text">
+          <div class="cred-title">Mobily: Executive Manager, Customer Base Management &amp; CLM Operations</div>
+          <div class="cred-sub">Led Customer Base Management and CLM Operations at Mobily (Etihad Etisalat). Full ownership of retention strategy, customer value management, and lifecycle programmes across 40M+ subscribers.</div>
+        </div>
+      </div>
+      <div class="credential">
+        <div class="cred-icon">📘</div>
+        <div class="cred-text">
+          <div class="cred-title">Author: Retention Schematics: The Revenue Compounding Playbook</div>
+          <div class="cred-sub">33-chapter retention manual for MENA SaaS and fintech leaders. Introduces Retention Architecture as a discipline and delivers the RARE Framework - a complete operating system for designing retention as a compounding revenue engine. Pre-order now open.</div>
+        </div>
+      </div>
+      <div class="credential">
+        <div class="cred-icon">🗺️</div>
+        <div class="cred-text">
+          <div class="cred-title">4+ Years: Independent SaaS &amp; Fintech Retention Consulting</div>
+          <div class="cred-sub">Retention and CS strategy advisory for SaaS and fintech companies across MENA. Bringing telecom-scale retention discipline - data models, CLM frameworks, P&amp;L thinking - to the SaaS customer success model.</div>
+        </div>
+      </div>
+      <div class="credential">
+        <div class="cred-icon">🛠️</div>
+        <div class="cred-text">
+          <div class="cred-title">Retention Schematics OS: 30+ Tools, Building Now</div>
+          <div class="cred-sub">An operational toolkit for SaaS and fintech retention leaders. Every tool built from a real problem, designed to compound NRR quarter by quarter. Free tools available now at retentionarchitect.gumroad.com.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ───────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Tarek Mabrouk</div>
+        <div class="footer-tagline">The Retention Revenue Architect · Design · Expand · Compound</div>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <div class="footer-col-title">Work</div>
+          <div class="footer-col-links">
+            <a href="#book">Book Pre-Order</a>
+            <a href="#tools">Free Tools</a>
+            <a href="https://retentionarchitect.gumroad.com" target="_blank" rel="noopener">Full Gumroad Store</a>
+            <a href="#work-with-me">Free Diagnostic</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <div class="footer-col-links">
+            <a href="https://www.linkedin.com/in/tarek-mabrouk-theretentionrevenuearchitect/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://tarekmabrouk.substack.com" target="_blank" rel="noopener">Substack Newsletter</a>
+            <a href="https://retentionarchitect.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
+            <a href="#about">About Tarek</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">The OS</div>
+          <div class="footer-col-links">
+            <a href="https://retentionarchitect.gumroad.com/l/Toolkist-CAC_Calculator" target="_blank" rel="noopener">Free CAC Calculator</a>
+            <a href="#tools">All Tools</a>
+            <a href="https://retentionarchitect.com" target="_blank" rel="noopener">Retention Schematics OS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© Tarek Mabrouk 2026 · The Retention Revenue Architect · Cairo, Egypt · #TheRetentionRevenueArchitect</div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/tarek-mabrouk-theretentionrevenuearchitect/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://tarekmabrouk.substack.com" target="_blank" rel="noopener">Substack</a>
+        <a href="https://retentionarchitect.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── SCRIPTS ──────────────────────────────────────────────────────── -->
+<script>
+/* Scroll animations */
+const observer = new IntersectionObserver(
+  (entries) => entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  }),
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+document.querySelectorAll('.fade-up').forEach((el, i) => {
+  el.style.transitionDelay = `${(i % 4) * 0.08}s`;
+  observer.observe(el);
+});
+
+/* Mobile hamburger */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mainNav    = document.getElementById('main-nav');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
+document.addEventListener('click', (e) => {
+  if (!mainNav.contains(e.target) && !mobileMenu.contains(e.target)) {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+});
+</script>
+
+<!-- Google Analytics - replace with your GA4 measurement ID -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+</script> -->
+
+</body>
+</html>
